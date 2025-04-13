@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package io.cdap.wrangler.utils;
+package io.cdap.wrangler.api.parser;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,7 +22,7 @@ import java.util.Map;
 /**
  * Utility class to parse byte size strings (e.g., "10KB", "5.5MiB") to bytes.
  */
-public class ByteSizeParser {
+public class ByteSize {
     private static final Map<String, Long> DECIMAL_UNITS = new HashMap<>();
     private static final Map<String, Long> BINARY_UNITS = new HashMap<>();
 

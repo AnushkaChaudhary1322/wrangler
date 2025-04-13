@@ -18,10 +18,10 @@ package io.cdap.wrangler.utils;
 
 import io.cdap.wrangler.api.Row;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.HashMap;
-import java.util.stream.Collectors; // Import Collectors for Java 11
+import java.util.stream.Collectors;
 
 /**
  * Utility methods for {@link Row}

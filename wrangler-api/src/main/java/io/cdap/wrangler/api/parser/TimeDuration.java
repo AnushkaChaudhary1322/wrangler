@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package io.cdap.wrangler.utils;
+package io.cdap.wrangler.api.parser;
 
 /**
  * Utility class to parse duration strings (e.g., "5s", "10m", "1h") into
  * milliseconds.
  */
-public class DurationParser {
+public class TimeDuration {
 
     /**
      * Parses a duration string like "10s", "5m", "1h", "3d", etc. into

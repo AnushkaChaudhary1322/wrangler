@@ -20,27 +20,28 @@ import java.math.BigInteger;
 import java.util.regex.Pattern;
 
 /**
- * Type Interface provides utility functions that allow you to detect the types of data.
+ * Type Interface provides utility functions that allow you to detect the types
+ * of data.
  */
 public class TypeInference {
   private static final Pattern patternInteger = Pattern.compile("^(\\+|-)?\\d+$");
 
   private static final Pattern patternDouble = Pattern.compile(
-    "^[-+]?"// Positive/Negative sign
-      + "("// BEGIN Decimal part
-      + "[0-9]+([,\\.][0-9]+)?|"// Alternative I (w/o grouped integer part)
-      + "(" // BEGIN Alternative II (with grouped integer part)
-      + "[0-9]{1,3}" // starting digits
-      + "(" // BEGIN grouped part
-      + "((,[0-9]{3})*"// US integer part
-      + "(\\.[0-9]+)?"// US float part
-      + "|" // OR
-      + "((\\.[0-9]{3})*|([ \u00A0\u2007\u202F][0-9]{3})*)"// EU integer part
-      + "(,[0-9]+)?)"// EU float part
-      + ")"// END grouped part
-      + ")" // END Alternative II
-      + ")" // END Decimal part
-      + "([ ]?[eE][-+]?[0-9]+)?$"); // scientific part
+      "^[-+]?"// Positive/Negative sign
+          + "("// BEGIN Decimal part
+          + "[0-9]+([,\\.][0-9]+)?|"// Alternative I (w/o grouped integer part)
+          + "(" // BEGIN Alternative II (with grouped integer part)
+          + "[0-9]{1,3}" // starting digits
+          + "(" // BEGIN grouped part
+          + "((,[0-9]{3})*"// US integer part
+          + "(\\.[0-9]+)?"// US float part
+          + "|" // OR
+          + "((\\.[0-9]{3})*|([ \u00A0\u2007\u202F][0-9]{3})*)"// EU integer part
+          + "(,[0-9]+)?)"// EU float part
+          + ")"// END grouped part
+          + ")" // END Alternative II
+          + ")" // END Decimal part
+          + "([ ]?[eE][-+]?[0-9]+)?$"); // scientific part
 
   /**
    * Detect if the given value is a double type.
@@ -119,7 +120,7 @@ public class TypeInference {
       return false;
     }
     if ((value.trim().length() == 4 || value.trim().length() == 5)
-      && ("true".equalsIgnoreCase(value) || "false".equalsIgnoreCase(value))) { //$NON-NLS-1$ //$NON-NLS-2$
+        && ("true".equalsIgnoreCase(value) || "false".equalsIgnoreCase(value))) { //$NON-NLS-1$ //$NON-NLS-2$
       return true;
     }
     return false;
@@ -157,7 +158,7 @@ public class TypeInference {
 
   /**
    *
-   * @param type the expected type
+   * @param type  the expected type
    * @param value the value to be detected
    * @return true if the type of value is expected, false otherwise.
    */
