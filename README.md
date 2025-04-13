@@ -86,6 +86,11 @@ These directives are currently available:
 | [Parse as Datetime](wrangler-docs/directives/parse-as-datetime.md)                   | Parses strings with datetime                                                                                                                                                                      |
 | [Parse As Integer](wrangler-docs/directives/parse-as-integer.md)                     | Parses values to integer                                                                                                                                                                          |
 | [Parse As Double](wrangler-docs/directives/parse-as-double.md)                       | Parses values to double                                                                                                                                                                           |
+|  |
+| [Parse As Time Duration](wrangler-docs/directives/parse-as-timeduration.md)          | Parses values to time duration                                                                                                                                                                    |
+|                                                                                      |
+| [Parse As Byte Size](wrangler-docs/directives/parse-as-bitesize.md)                  | Parses values to byte size                                                                                                                                                                        |
+|  |
 | values to CDAP datetime type                                                         |
 | **Output Formatters**                                                                |                                                                                                                                                                                                   |
 | [Write as CSV](wrangler-docs/directives/write-as-csv.md)                             | Converts a record into CSV format                                                                                                                                                                 |
